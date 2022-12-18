@@ -40,6 +40,6 @@ def main() :
         st.dataframe(df[df['Genres'].str.contains(str('war'),na=False)])
         st.dataframe(df_main[df['Genres'].str.contains(str('war'),na=False)])
         
-
+ㅇㅇㅇㅇ
 if __name__ == '__main__':
     main()
