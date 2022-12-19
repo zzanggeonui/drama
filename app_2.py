@@ -14,7 +14,7 @@ def run_2_app() :
     filter = df_main[df['Genres'].str.contains(str(select),na=False)]
     
     select2 =  st.selectbox('배우선택',df_actor)
-    select3 =  st.selectbox('tag선택',df_tag)
+    select3 =  st.multiselect('tag선택',df_tag)
     st.dataframe(filter[df['actors'].str.contains(str(select2),na=False)],)
     
 

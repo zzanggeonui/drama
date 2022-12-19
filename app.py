@@ -6,13 +6,13 @@ from app_2 import run_2_app
 
 def main() :
     st.title('드라마')
-    menu = ['홈','추천','차트']
+    menu = ['홈','상세검색','차트']
     choice = st.sidebar.selectbox('메뉴',menu)
 
     if choice == '홈' :
         run_home_app()
 
-    elif choice == '추천' :
+    elif choice == '상세검색' :
         run_2_app()
 
     elif choice == '차트':
