@@ -10,7 +10,7 @@ def main() :
     choice = st.sidebar.selectbox('메뉴',menu)
 
     if choice == '홈' :
-        pass
+        st.subheader('추천')
         
 
     elif choice == '상세검색' :

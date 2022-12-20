@@ -20,6 +20,8 @@ def run_home_app() :
     elif status == '조회순' :
         st.dataframe(df.loc[:,['drama_name','Watchers']].sort_values('Watchers',ascending=False).head(100) )
 
+
+    st.radio('작품')
     select = st.text_input('드라마 제목을 입력하세요')
     name_select = st.selectbox('드라마확인',df_name[df_name['name'].str.contains(str(select),na=False,case=False)])
     if len(select) != 0 :
