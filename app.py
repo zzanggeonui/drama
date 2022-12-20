@@ -10,13 +10,14 @@ def main() :
     choice = st.sidebar.selectbox('메뉴',menu)
 
     if choice == '홈' :
-        run_home_app()
+        pass
+        
 
     elif choice == '상세검색' :
-        run_2_app()
+        run_home_app()
 
     elif choice == '차트':
-        pass
+        run_2_app()
 
 
 if __name__ == '__main__':

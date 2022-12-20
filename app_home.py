@@ -8,8 +8,8 @@ st.set_page_config(layout="wide")
 df_name = pd.read_csv('data/drama_name.csv')
 
 def run_home_app() :
-    status = st.radio('드라마랭킹 top100',['인기순','평점순','리뷰순','시청순'])
-    df= pd.read_csv('data/realeditdrama.csv')
+    status = st.radio('드라마랭킹 top100',['인기순','평점순','리뷰순','조회순'])
+    df= pd.read_csv('data/realeditdrama.csv', thousands = ',')
 
     if status == '인기순' :
         st.dataframe(df.loc[:,['drama_name','Popularity']].sort_values('Popularity').head(100))
@@ -17,8 +17,8 @@ def run_home_app() :
         st.dataframe(df.loc[:,['drama_name','score']].sort_values('score',ascending=False).head(100) )
     elif status == '리뷰순' :
         st.dataframe(df.loc[:,['drama_name','scored by']].sort_values('scored by',ascending=False ).head(100))
-    elif status == '시청순' :
-        st.dataframe(df.loc[:,['drama_name','Watchers']].sort_values('Watchers').head(100) )
+    elif status == '조회순' :
+        st.dataframe(df.loc[:,['drama_name','Watchers']].sort_values('Watchers',ascending=False).head(100) )
 
     select = st.text_input('드라마 제목을 입력하세요')
     name_select = st.selectbox('드라마확인',df_name[df_name['name'].str.contains(str(select),na=False,case=False)])
