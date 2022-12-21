@@ -6,50 +6,73 @@ from googletrans import Translator
 translator = Translator()
 st.set_page_config(layout="wide")
 df_name = pd.read_csv('data/drama_name.csv')
+df_actor = pd.read_csv('data/actor_list.csv')
+df_actor = df_actor.drop_duplicates()
 
 def run_home_app() :
-    status = st.radio('드라마랭킹 top100',['인기순','평점순','리뷰순','조회순'])
+    
+    radio_select = st.radio('', ['드라마 제목','배우이름']) 
+    st.subheader('{}으로 검색'.format(radio_select))
+
     df= pd.read_csv('data/realeditdrama.csv', thousands = ',')
-
-    if status == '인기순' :
-        st.dataframe(df.loc[:,['drama_name','Popularity']].sort_values('Popularity').head(100))
-        
-    elif status == '평점순' :
-        st.dataframe(df.loc[:,['drama_name','score']].sort_values('score',ascending=False).head(100) )
-    elif status == '리뷰순' :
-        st.dataframe(df.loc[:,['drama_name','scored by']].sort_values('scored by',ascending=False ).head(100))
-    elif status == '조회순' :
-        st.dataframe(df.loc[:,['drama_name','Watchers']].sort_values('Watchers',ascending=False).head(100) )
-
-    score = st.slider('평점별', 4.0 ,10.0,step=0.5)
-   
-    st.dataframe(df[(df['score'] <= score ) & (df['score'] >= score -0.5 )])
     
 
-    select = st.text_input('드라마 제목을 입력하세요')
-    name_select = st.selectbox('드라마확인',df_name[df_name['name'].str.contains(str(select),na=False,case=False)])
-    if len(select) != 0 :
-        serch = 'https://mydramalist.com/search?q='+name_select +'&adv=titles&ty=68&co=3&so=relevance'
-        re = requests.get(serch)
-        ra = re.text
-        htm = BeautifulSoup(ra, 'html.parser')
-        href = htm.find('div').find('h6').find('a')['href']
-        link = 'https://mydramalist.com'+href
-        req = requests.get(link)
-        raw = req.text
-        html = BeautifulSoup(raw, 'html.parser')
-        infos = html.select('div.show-synopsis')
-        
-        
+    if radio_select == '드라마 제목' :
 
-        url = html.select_one('#content > div > div.container-fluid.title-container > div > div.col-lg-8.col-md-8.col-rightx > div:nth-child(1) > div.box-body > div > div.col-sm-4.film-cover.cover > a.block > img')['src']
-        st.image(url)
-        st.subheader('시놉시스')
-        for title in infos :
-            synop = title.get_text()
-            tr_result = translator.translate(synop,dest='ko').text
-            st.markdown(tr_result)
-            see_list = ['drama_name','Ranked','Popularity','score','Content Rating','actors','Episodes','platforms']	
-            st.dataframe(df.loc[df['drama_name'].str.contains(name_select),see_list])
-    
+
+        select = st.text_input('')
+        if len(select) != 0 :
+            name_select = st.selectbox('드라마확인',df_name[df_name['name'].str.contains(str(select),na=False,case=False)])
+            if str(name_select) in df_name['drama_name'].tolist() :
+                serch = 'https://mydramalist.com/search?q='+name_select +'&adv=titles&ty=68&co=3&so=relevance'
+                re = requests.get(serch)
+                ra = re.text
+                htm = BeautifulSoup(ra, 'html.parser')
+                href = htm.find('div').find('h6').find('a')['href']
+                link = 'https://mydramalist.com'+href
+                req = requests.get(link)
+                raw = req.text
+                html = BeautifulSoup(raw, 'html.parser')
+                infos = html.select('div.show-synopsis')
+                
+                
+
+                url = html.select_one('#content > div > div.container-fluid.title-container > div > div.col-lg-8.col-md-8.col-rightx > div:nth-child(1) > div.box-body > div > div.col-sm-4.film-cover.cover > a.block > img')['src']
+                st.image(url)
+                st.subheader('시놉시스')
+                for title in infos :
+                    synop = title.get_text()
+                    tr_result = translator.translate(synop,dest='ko').text
+                    st.markdown(tr_result)
+                    see_list = ['drama_name','Ranked','Popularity','score','Content Rating','actors','Episodes','platforms']	
+                    st.dataframe(df.loc[df['drama_name'].str.contains(name_select),see_list])
+            else :
+                st.text('검색결과가 없습니다')
+
+    if radio_select == '배우이름' :    
+        select = st.text_input('')
         
+        if len(select) != 0 :
+            name_select = st.selectbox('배우이름 확인',df_actor[df_actor['actor'].str.contains(str(select),na=False,case=False)])
+            if str(name_select) in df_actor['actor'].tolist() :
+
+                serch = 'https://mydramalist.com/search?q='+name_select
+                re = requests.get(serch)
+                ra = re.text
+                htm = BeautifulSoup(ra, 'html.parser')
+                href = htm.find('div').find('h6').find('a')['href']
+                link = 'https://mydramalist.com'+href
+                req = requests.get(link)
+                raw = req.text
+                html = BeautifulSoup(raw, 'html.parser')
+
+                url = html.select_one('#content > div > div.container-fluid > div > div.col-lg-8.col-md-8 > div:nth-child(1) > div:nth-child(3) > div > div.col-sm-4.text-center.cover.hidden-md-up > img')['src']
+                see_list = ['drama_name','Ranked','Popularity','score','Content Rating','actors','Episodes','platforms']
+                st.image(url)
+
+                st.subheader('대표작')
+                most_drama = st.dataframe(df.loc[df['actors'].str.contains(name_select, na= False ),see_list])
+                drama_name = most_drama[0]
+            else:
+                st.text('검색결과가 없습니다')
+                

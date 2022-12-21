@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 
 def run_2_app() :
+
+    genre_list = pd.read_csv('data/genre_sum.csv').head(10)
     df= pd.read_csv('data/realeditdrama.csv',index_col =0)
     df_genre= pd.read_csv('data/gentttttt.csv',index_col = 'genre')
     df_main = df.loc[:,['drama_name','Episodes','platforms']]
@@ -19,3 +21,11 @@ def run_2_app() :
     
 
     st.dataframe(df_main[df['actors'].str.contains(str(select2),na=False)],)
+
+
+    score = st.slider('평점별', 4.0 ,10.0,step=0.5)
+   
+    st.dataframe(df[(df['score'] <= score ) & (df['score'] >= score -0.5 )])
+    
+    fig = px.pie(genre_list, 'genre','sum',title='장르별 차트')
+    st.plotly_chart(fig)
