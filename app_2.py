@@ -27,5 +27,4 @@ def run_2_app() :
    
     st.dataframe(df[(df['score'] <= score ) & (df['score'] >= score -0.5 )])
     
-    fig = px.pie(genre_list, 'genre','sum',title='장르별 차트')
-    st.plotly_chart(fig)
+    
