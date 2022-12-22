@@ -17,12 +17,13 @@ if platform.system() == 'Linux':
 
 def run_eda_app() :
     df = pd.read_csv('data/realeditdrama.csv', thousands = ',')
+   
 
     
     
-
+    st.subheader('●분류별 드라마 분석')
     pie_list = ['장르','태그','플랫폼']
-    use_select = st.selectbox('분류별 드라마 분석',pie_list)
+    use_select = st.selectbox('',pie_list)
     if use_select == '태그' :
         tag = df['Tags']
         tag_list = []
@@ -38,15 +39,20 @@ def run_eda_app() :
 
         fig4 = px.bar(tag_sum.head(15), x='tag', y='sum')
         st.plotly_chart(fig4)
+        if st.button('전체 태그별 작품수 확인') :
+            st.dataframe(tag_sum)
 
     if use_select == '장르' :
-        genre_sum = pd.read_csv('data/genre_sum.csv')
+        genre_sum = pd.read_csv('data/genre_sum.csv').drop('gneres',axis=1)
 
         fig = px.pie(genre_sum.head(10), 'genre','sum',title='드라마로 많이 제작되는 장르는?? ')
         st.plotly_chart(fig)
 
         fig2 = px.bar(genre_sum.head(15), x='genre', y='sum')
         st.plotly_chart(fig2)
+        if st.button('전체 장르별 작품수 확인') :
+            st.dataframe(genre_sum)
+
 
     if use_select == '플랫폼' :
         platforms = df['platforms']
@@ -64,9 +70,11 @@ def run_eda_app() :
 
         fig4 = px.bar(plat.head(15), x='platforms', y='sum')
         st.plotly_chart(fig4)
-
+        if st.button('전체 플랫폼별 볼수있는 작품수 확인') :
+            st.dataframe(plat)
     
-    st.subheader('히스토그램 분석')
+    
+    st.subheader('●히스토그램 분석')
     columns = ['에피소드수', '러닝타임' ,'점수','사이트 조회수' ,'리뷰수' ,'순위' ,'화제성']
     
     column_list = ['score','Duration','Episodes','Content Rating']
@@ -74,7 +82,7 @@ def run_eda_app() :
     my_bins = st.number_input('빈의 갯수를 입력하세요', 25, 50, value=30, step=1)
     
     if histogram_column == 'Content Rating':
-        st.info(' 얼마나 {}이 분포하는지 확인할 수 있습니다 '.format(histogram_column))
+        st.info(' 한국드라마의 {} 분포확인 '.format(histogram_column))
         fig1 = plt.figure()
         plt.hist(data= df, x=histogram_column, rwidth=0.8, bins=my_bins)
         plt.title(histogram_column + ' Histogram')
@@ -86,7 +94,7 @@ def run_eda_app() :
 
 
     else :
-        st.info(' 얼마나 {}가 분포하는지 확인할 수 있습니다 '.format(histogram_column))
+        st.info(' 한국드라마의 {} 분포 확인 '.format(histogram_column))
         fig1 = plt.figure()
         plt.hist(data= df, x=histogram_column, rwidth=0.8, bins=my_bins)
         plt.title(histogram_column + ' Histogram')
@@ -97,7 +105,7 @@ def run_eda_app() :
 
 
 
-    st.subheader('드라마 상관관계 분석')
+    st.subheader('●드라마 상관관계 분석')
     selected_list = st.multiselect('원하는 컬럼을 선택해주세요',columns)
     if len(selected_list) >= 2 :
             df_corr = df.loc[:,['Episodes','Duration','score','Watchers','scored by','Ranked','Popularity']]
@@ -110,7 +118,7 @@ def run_eda_app() :
             sb.heatmap(data= df_corr, annot=True, fmt='.2f', cmap='coolwarm',
                 vmin= -1, vmax= 1 , linewidths=0.5 )
             st.pyplot(fig2)
-            st.info('화제성 과 순위는 낮은 숫자일 수록 좋은 지수 입니다, 즉 반비례 할때 관계성이 좋은 지표입니다')
+            st.info('화제성 과 순위는 낮은 숫자일수록 좋은 지수로, 반비례 할때 관계성이 좋은 지표입니다')
 
 
 
