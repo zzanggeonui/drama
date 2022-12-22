@@ -72,7 +72,7 @@ def run_home_app() :
 
                 st.subheader('대표작')
                 most_drama = st.dataframe(df.loc[df['actors'].str.contains(name_select, na= False ),see_list])
-                drama_name = most_drama[0]
+                
             else:
                 st.text('검색결과가 없습니다')
                 
