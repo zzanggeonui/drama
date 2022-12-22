@@ -28,12 +28,12 @@ def run_sc_app() :
 
     if select_rank =='장르별' :
         genre_scpore = pd.read_csv('data/genre_scpore.csv',index_col='genre')
-        genre_sum = pd.read_csv('data/genre_sum.csv')
+        genre_sum = pd.read_csv('data/gnre_sum.csv')
 
         if status == '인기순':
            
             st.subheader('시청자로부터 사랑을 받은 작품이 많은 장르순입니다')
-            st.dataframe(genre_scpore.loc[:,['popul']].sort_values('popul'))
+            st.dataframe(genre_scpore.loc[:,['popul']].seort_values('popul'))
             list = genre_scpore.sort_values('popul').head(10)
             select = st.selectbox('인기가 많았던 장르별 드라마',list )
             st.dataframe(df_main[df['Genres'].str.contains(str(select),na=False)],)
@@ -75,7 +75,7 @@ def run_sc_app() :
         if status == '평점순':
             st.subheader('평가가 좋은 작품의 태그 입니다')
             st.dataframe(tag_slporesum[tag_slporesum['sum'] >10].loc[:,['score']].sort_values('score',ascending=False))
-            list = tag_slporesum[tag_slporesum['sum'] >10].sort_values('score').head(10)
+            list = tag_slporesum[tag_slporesum['sum'] >10].sort_values('score'ascending=False).head(10)
             st.subheader('태그별 평가가 좋은 대표 드라마 목록 입니다')
             select = st.selectbox('',list )
             st.dataframe(df_main[df['Tags'].str.contains(str(select),na=False)],)
@@ -84,7 +84,7 @@ def run_sc_app() :
         if status == '화제순':
             st.subheader('화제가 된 작품들의 태그입니다')
             st.dataframe(tag_slporesum[tag_slporesum['sum'] >10].loc[:,['review']].sort_values('review',ascending=False))
-            list = tag_slporesum[tag_slporesum['sum'] >10].sort_values('review').head(10)
+            list = tag_slporesum[tag_slporesum['sum'] >10].sort_values('review',ascending=Fals).head(10)
             st.subheader('태그별 드라마 목록 입니다')
             select = st.selectbox('',list )
             st.dataframe(df_main[df['Tags'].str.contains(str(select),na=False)],)
