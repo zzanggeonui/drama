@@ -27,4 +27,15 @@ def run_2_app() :
    
     st.dataframe(df[(df['score'] <= score ) & (df['score'] >= score -0.5 )])
     
-    
+
+
+    elif  histogram_column == 'platforms' :
+        platforms = df['platforms']
+        platforms_list = []
+        for x in platforms :
+            x = x.split(',')
+            for x2 in x :
+                x2 = x2.strip(" ")
+                x2 = x2.strip("''")
+                platforms_list.append(x2)
+        plat = pd.DataFrame(pd.DataFrame(data =platforms_list).value_counts()).rename(columns={0:'platforms'})
