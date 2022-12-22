@@ -24,10 +24,6 @@ def run_ml_app() :
     if select_rank =='장르별' :
         genre_all = pd.read_csv('data/genre_list.csv')
         genre_list = genre_all['genre'].tolist()
-        genre_sum = pd.read_csv('data/genre_sum.csv')
-
-        fig = px.pie(genre_sum.head(10), 'genre','sum',title='장르별 차트')
-        st.plotly_chart(fig)
 
         app = []
         for x in genre_list :
@@ -67,16 +63,14 @@ def run_ml_app() :
         genre_scpore = genre_scpore.drop_duplicates()
         
 
-        st.subheader('화제를 모으는 작품이 많은 장르순입니다')
-        st.dataframe(genre_scpore.loc[:,['popul']].sort_values('popul'))
-
+        if status == '인기순' :
+            st.dataframe(genre_scpore.loc[:,['popul']].sort_values('popul'))
             
-        st.subheader('평가가 좋은 작품이 많은 장르입니다')
-        st.dataframe(genre_scpore.loc[:,['score']].sort_values('score',ascending=False))
+        elif status == '평점순' :
+            st.dataframe(genre_scpore.loc[:,['score']].sort_values('score'),ascending=False)
             
-
-        st.subheader('리뷰가 많이 달리는 작품 장르입니다')
-        st.dataframe(genre_scpore.loc[:,['review']].sort_values('review',ascending=False))
+        elif status == '리뷰순' :
+            st.dataframe(genre_scpore.loc[:,['scored by']].sort_values('scored by'),ascending=False)
             
         
     
