@@ -22,7 +22,7 @@
 <img src= https://img.shields.io/badge/matplotlib.pyplot-F7931E?style=flat&logo=matplotlib.pyplot&logoColor=white)/>
 <img src=https://img.shields.io/badge/Seaborn-232F3E?style=flat&logo=Seaborn&logoColor=white />
 <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=Bootstrap&logoColor=white" />
-<br/>]
+<br/>
 	
 <div align=center>
 <p> Tools </p>
@@ -30,6 +30,10 @@
 <img src=https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=Visual%20Studio%20Code&logoColor=white/>
 <img src=https://img.shields.io/badge/Amazon%20AWS-232F3E?style=flat&logo=Amazon%20AWS&logoColor=white/>
 <img src=https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=Jupyter&logoColor=white)/>
+----
 
+드라마 및 영상물 리뷰 전문 사이트인 IMDb와 MyDramaList의 한국 드라마 데이터를 기반으로 한국드라마 흥행요인 분석 및 검색 기능을 구현한 앱입니다.
+	
+----
 
 
