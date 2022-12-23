@@ -15,20 +15,20 @@
 	
 <div align=center>
 </h3> Library</h3>
-[![NumPy Badge](https://img.shields.io/badge/NumPy-013243?style=flat&logo=NumPy&logoColor=white)](https://numpy.org/install/)
+<img src=https://img.shields.io/badge/NumPy-013243?style=flat&logo=NumPy&logoColor=white />
 <img src=https://img.shields.io/badge/pandas-150458?style=flat&logo=pandas&logoColor=white)](https://pandas.pydata.org/>
 <img src=https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white)](https://streamlit.io/>
 <img src= https://img.shields.io/badge/matplotlib.pyplot-F7931E?style=flat&logo=matplotlib.pyplot&logoColor=white)/>
 <img src=https://img.shields.io/badge/Seaborn-232F3E?style=flat&logo=Seaborn&logoColor=white />
 <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=Bootstrap&logoColor=white" />
-<br/>](https://getbootstrap.com/)
+<br/>]
 	
 <div align=center>
 <p> Tools </p>
-[![Anaconda Badge](https://img.shields.io/badge/Anaconda-44A833?style=flat&logo=Anaconda&logoColor=white)](https://www.anaconda.com/products/distribution)
-[![Visual Studio Code Badge](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=Visual%20Studio%20Code&logoColor=white)](https://code.visualstudio.com/download)
-[![Amazon AWS Badge](https://img.shields.io/badge/Amazon%20AWS-232F3E?style=flat&logo=Amazon%20AWS&logoColor=white)](https://aws.amazon.com/ko/console/)
-[![Jupyter notebook](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=Jupyter&logoColor=white)]
+<img src=https://img.shields.io/badge/Anaconda-44A833?style=flat&logo=Anaconda&logoColor=white/>
+<img src=https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=Visual%20Studio%20Code&logoColor=white/>
+<img src=https://img.shields.io/badge/Amazon%20AWS-232F3E?style=flat&logo=Amazon%20AWS&logoColor=white/>
+<img src=https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=Jupyter&logoColor=white)/>
 
 
 
