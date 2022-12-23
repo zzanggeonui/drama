@@ -37,7 +37,7 @@ def run_eda_app() :
         fig3 = px.pie(tag_sum.head(10), 'tag','sum',title='한국 드라마에서 가장많이 사용된 진행 형식은? ')
         st.plotly_chart(fig3)
 
-        fig4 = px.bar(tag_sum.head(15), x='tag', y='sum')
+        fig4 = px.bar(tag_sum, x='tag', y='sum')
         st.plotly_chart(fig4)
         if st.button('전체 태그별 작품수 확인') :
             st.dataframe(tag_sum)
@@ -75,33 +75,34 @@ def run_eda_app() :
     
     
     st.subheader('●히스토그램 분석')
-    columns = ['에피소드수', '러닝타임' ,'점수','사이트 조회수' ,'리뷰수' ,'순위' ,'화제성']
-    
-    column_list = ['score','Duration','Episodes','Content Rating']
-    histogram_column = st.selectbox('',column_list)
+    columns = ['점수','러닝타임','에피소드수','연령제한']
+    df_hist = df.loc[:,['score','Duration','Episodes','Content Rating']]
+    df_hist.columns = ['점수','러닝타임','에피소드수','연령제한']
+    histogram_column = st.selectbox('',columns)
     my_bins = st.number_input('빈의 갯수를 입력하세요', 25, 50, value=30, step=1)
     
-    if histogram_column == 'Content Rating':
+    if histogram_column == '연령제한':
         st.info(' 한국드라마의 {} 분포확인 '.format(histogram_column))
         fig1 = plt.figure()
-        plt.hist(data= df, x=histogram_column, rwidth=0.8, bins=my_bins)
+        plt.hist(data= df_hist, x=histogram_column, rwidth=0.8, bins=my_bins)
         plt.title(histogram_column + ' Histogram')
         plt.xlabel(histogram_column)
         plt.xticks(rotation = 45)
         plt.ylabel('Count')
         st.pyplot(fig1)
-        st.dataframe(df['Content Rating'].value_counts())
+        if st.button('describe 보기') :
+            st.dataframe(df.hist['연령제한'].value_counts())
 
 
     else :
         st.info(' 한국드라마의 {} 분포 확인 '.format(histogram_column))
         fig1 = plt.figure()
-        plt.hist(data= df, x=histogram_column, rwidth=0.8, bins=my_bins)
+        plt.hist(data= df_hist, x=histogram_column, rwidth=0.8, bins=my_bins)
         plt.title(histogram_column + ' Histogram')
         plt.xlabel(histogram_column)
         plt.ylabel('Count')
         st.pyplot(fig1)
-        st.write(df[histogram_column].describe())
+        st.write(df_hist[histogram_column].describe())
 
 
 

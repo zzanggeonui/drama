@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from app_home import run_home_app
 from app_eda import run_eda_app
-from app_serch import run_sc_app
+from app_copy import run_sc_app
 from googletrans import Translator
 import requests
 from bs4 import BeautifulSoup
