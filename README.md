@@ -32,13 +32,17 @@
 <img src=https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=Jupyter&logoColor=white)/>
 	<br/>
 <div align=left>
-</h3>개요
+-----
+</h3> 
+	### 개요
+<br/>
 드라마 및 영상물 리뷰 전문 사이트인 IMDb와 MyDramaList의 한국 드라마 데이터를 기반으로 한국드라마 흥행요인 분석 및 검색 기능을 구현한 앱입니다.
 	<br/>
-----
 
 
-----
-주소
+
+
+###주소
+	<br/>
 http://ec2-43-201-85-127.ap-northeast-2.compute.amazonaws.com:8503/
 <br/>
