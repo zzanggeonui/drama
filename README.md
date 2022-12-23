@@ -10,11 +10,12 @@
 <br/>
 <div align=center>
 <p> Languages <p>
-[![Python Badge](https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white)](https://www.python.org/downloads/)
+<img src=https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white/>
 <br/>
 	
 <div align=center>
 </h3> Library</h3>
+ <p>	
 <img src=https://img.shields.io/badge/NumPy-013243?style=flat&logo=NumPy&logoColor=white />
 <img src=https://img.shields.io/badge/pandas-150458?style=flat&logo=pandas&logoColor=white)](https://pandas.pydata.org/>
 <img src=https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white)](https://streamlit.io/>
