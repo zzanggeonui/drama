@@ -20,7 +20,7 @@
 [![Streamlit Badge](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white)](https://streamlit.io/)
 [![matplotlib.pyplot Badge](https://img.shields.io/badge/matplotlib.pyplot-F7931E?style=flat&logo=matplotlib.pyplot&logoColor=white)](https://matplotlib.org/stable/users/installing/index.html)
 [![Seaborn Badge](https://img.shields.io/badge/Seaborn-232F3E?style=flat&logo=Seaborn&logoColor=white)](https://seaborn.pydata.org/installing.html)
-[![Bootstrap Badge](https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=Bootstrap&logoColor=white)](https://getbootstrap.com/)
+<img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=Bootstrap&logoColor=white" />
 <br/>
 	
 <div align=center>
