@@ -9,9 +9,10 @@
 [![Gmail Badge](https://img.shields.io/badge/Gmail-D14836?style=flat&logo=Gmail&logoColor=white)](mailto:gksrjsgml961105@gmail.com)
 <br/>
 <div align=center>
-</h3> Languages </h3>
+<p> Languages <p>
 [![Python Badge](https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white)](https://www.python.org/downloads/)
 <br/>
+	
 <div align=center>
 </h3> Library</h3>
 [![NumPy Badge](https://img.shields.io/badge/NumPy-013243?style=flat&logo=NumPy&logoColor=white)](https://numpy.org/install/)
@@ -21,8 +22,9 @@
 [![Seaborn Badge](https://img.shields.io/badge/Seaborn-232F3E?style=flat&logo=Seaborn&logoColor=white)](https://seaborn.pydata.org/installing.html)
 [![Bootstrap Badge](https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=Bootstrap&logoColor=white)](https://getbootstrap.com/)
 <br/>
+	
 <div align=center>
-	<p> Tools </p>
+<p> Tools </p>
 [![Anaconda Badge](https://img.shields.io/badge/Anaconda-44A833?style=flat&logo=Anaconda&logoColor=white)](https://www.anaconda.com/products/distribution)
 [![Visual Studio Code Badge](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=Visual%20Studio%20Code&logoColor=white)](https://code.visualstudio.com/download)
 [![Amazon AWS Badge](https://img.shields.io/badge/Amazon%20AWS-232F3E?style=flat&logo=Amazon%20AWS&logoColor=white)](https://aws.amazon.com/ko/console/)
