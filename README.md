@@ -31,8 +31,8 @@
 <img src=https://img.shields.io/badge/Amazon%20AWS-232F3E?style=flat&logo=Amazon%20AWS&logoColor=white/>
 <img src=https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=Jupyter&logoColor=white)/>
 	<br/>
-----
--개요
+<div align=left>
+</h3>개요
 드라마 및 영상물 리뷰 전문 사이트인 IMDb와 MyDramaList의 한국 드라마 데이터를 기반으로 한국드라마 흥행요인 분석 및 검색 기능을 구현한 앱입니다.
 	<br/>
 ----
