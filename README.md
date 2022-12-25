@@ -82,7 +82,7 @@ http://ec2-43-201-85-127.ap-northeast-2.compute.amazonaws.com:8503/
 	
 ## 데이터 참고
 - 메인 데이터 :https://www.kaggle.com/datasets/iphigeniebera/korean-drama-list-about-740-unique-dramas
-- 스크래핑 시놉시스 및 사진 자료 : https://mydramalist.com/
+- 스크래핑 시놉시스 및 사진 자료  : https://mydramalist.com/
 
 
 
