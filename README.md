@@ -9,12 +9,12 @@
 [![Gmail Badge](https://img.shields.io/badge/Gmail-D14836?style=flat&logo=Gmail&logoColor=white)](mailto:gksrjsgml961105@gmail.com)
 <br/>
 <div align=center>
-## Languages
+<h3> Languages <h3> 
 <img src=https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white/>
 <br/>
 	
 <div align=center>
-## Library	
+<h3> Library <h3> 	
 <img src=https://img.shields.io/badge/NumPy-013243?style=flat&logo=NumPy&logoColor=white />
 <img src=https://img.shields.io/badge/pandas-150458?style=flat&logo=pandas&logoColor=white)](https://pandas.pydata.org/>
 <img src=https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=Streamlit&logoColor=white)](https://streamlit.io/>
@@ -24,7 +24,7 @@
 <br/>
 	
 <div align=center>
-## Tools
+<h3> Tools <h3> 
 <img src=https://img.shields.io/badge/Anaconda-44A833?style=flat&logo=Anaconda&logoColor=white/>
 <img src=https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=Visual%20Studio%20Code&logoColor=white/>
 <img src=https://img.shields.io/badge/Amazon%20AWS-232F3E?style=flat&logo=Amazon%20AWS&logoColor=white/>
@@ -51,6 +51,7 @@ http://ec2-43-201-85-127.ap-northeast-2.compute.amazonaws.com:8503/
 ![image](https://github.com/zzanggeonui/drama/blob/main/data/IMG.png)
 ![image](https://github.com/zzanggeonui/drama/blob/main/data/img2.png)
 ![image](https://github.com/zzanggeonui/drama/blob/main/data/img3.png)
+![image](https://github.com/zzanggeonui/drama/blob/main/data/img4.png)
 	
 - 검색을 통해 작품 시놉시스와 정보, 배우의 필모그래피를 확인할 수 있습니다
 - 상세검색에선 Interactive select를 통한 원하는 작품을 직접 찾아볼 수 있으며
@@ -78,9 +79,8 @@ http://ec2-43-201-85-127.ap-northeast-2.compute.amazonaws.com:8503/
 
 
 	
-<br/>	
+	
 ## 데이터 참고
-
 - 메인 데이터 :https://www.kaggle.com/datasets/iphigeniebera/korean-drama-list-about-740-unique-dramas
 - 스크래핑 시놉시스 및 사진 자료 : https://mydramalist.com/
 
