@@ -27,7 +27,7 @@ def run_eda_app() :
     st.subheader('●분류별 드라마 분석')
     user_select1 = st.selectbox('',['장르','태그','플랫폼','배우'])
     user_select2 = st.selectbox('',['점수별','인기별','리뷰수','작품수'])
-    st.write('<style>div.row-widget.stSelectbox > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+
 
     st.subheader('전체 {} , 상위 {} 확인'.format(user_select1,user_select2))
 
