@@ -10,6 +10,10 @@ def run_sc_app() :
     df_main.columns = ['제목','연령제한','화제순','평점순','인기순','에피소드수','장르','태그','플랫폼']
 
     st.title('항목별 상세 검색 페이지 입니다')
+    url1 = 'https://www.hays.co.uk/documents/34684/1181367/Image_multi_blog_searchingrightjobs_LandingPage.jpg/a0b690db-2480-4261-c7ba-4c871d4548fa?t=1561475486326&imagePreview=1'
+    st.image(url1)
+
+    st.subheader('항목을 선택해 주세요')
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     platforms = df['platforms']
     platforms_list = []
@@ -25,11 +29,12 @@ def run_sc_app() :
 
     
     status = st.radio('',['인기순','평점순','화제순'])
-    st.subheader('플랫폼 선택')
-    plat_select = st.selectbox('',plat)
+    
 
-    st.subheader('평점선택')
-    score = st.select_slider('', options=[4,5,6,7,8,9,10,'전체'],value='전체')
+    plat_select = st.selectbox('플랫폼을 선택해주세요',plat)
+
+    
+    score = st.select_slider('평점선택을 선택해 주세요', options=[4,5,6,7,8,9,10,'전체'],value='전체')
 
       
 

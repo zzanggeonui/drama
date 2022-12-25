@@ -1,4 +1,4 @@
-tags,tag,score,Popularity,review,sum
+tags,태그,점수별,인기별,리뷰수,작품수
 ,,7.698950766747372,10206.134585289516,7034.28813559322,85
 """alzheimer's disease""","""alzheimer's disease""",7.859999999999999,2644.6,1237.2,5
 """best friends' relationship ""","""best friends' relationship """,7.5,1882.0,2544.5,2
@@ -267,7 +267,7 @@ café owner female lead,café owner female lead,7.1,908.0,5861.5,1
 café owner female lead ,café owner female lead ,7.0,1257.0,2835.0,1
 café setting,café setting,7.1,1708.5,4667.0,2
 calligrapher,calligrapher,7.4,580.0,6076.0,1
-calm female lead,calm female lead,8.028571428571428,2040.9285714285716,11684.0,11
+calm female lead,calm female lead,8.028571428571428,2040.928571428572,11684.0,11
 calm female lead ,calm female lead ,8.433333333333334,453.0,12831.0,3
 calm male lead,calm male lead,8.155813953488373,944.1395348837208,15793.023255813954,41
 calm male lead ,calm male lead ,7.85,1336.5,3382.5,2
@@ -573,7 +573,7 @@ emotionless male lead,emotionless male lead,8.9,143.0,18467.0,1
 empathic male lead,empathic male lead,8.2,2680.0,2048.5,2
 emperor male lead,emperor male lead,7.7,1366.0,2827.0,1
 enemies to friends,enemies to friends,7.7,893.3333333333334,5722.333333333333,3
-enemies to lovers,enemies to lovers,7.625,2601.1111111111118,7034.6875,14
+enemies to lovers,enemies to lovers,7.625,2601.111111111112,7034.6875,14
 enemies to lovers ,enemies to lovers ,7.366666666666667,2073.0,4428.666666666667,4
 enemy mine,enemy mine,8.299999999999999,451.6666666666667,9396.666666666666,3
 energetic female lead,energetic female lead,8.1,254.5,14117.0,2
@@ -684,7 +684,7 @@ female rivalry ,female rivalry ,8.1,1579.0,1905.0,1
 femme fatale,femme fatale,7.550000000000001,3605.5,954.0,2
 fight,fight,7.978571428571429,1960.9642857142856,10267.0,6
 fight for justice,fight for justice,8.033333333333333,1977.3333333333333,2989.333333333333,3
-filmed abroad,filmed abroad,7.455555555555557,2417.1111111111118,14893.111111111111,6
+filmed abroad,filmed abroad,7.455555555555557,2417.111111111112,14893.111111111111,6
 filmed abroad ,filmed abroad ,7.0,5686.666666666667,1780.6666666666667,3
 financial conflict,financial conflict,7.2,1542.0,2260.0,1
 fire accident,fire accident,7.85,1154.5,5254.0,2
@@ -1081,7 +1081,7 @@ married couple,married couple,7.387500000000003,19118.5,1188.375,26
 married female lead,married female lead,7.366666666666667,7182.0,80.66666666666667,3
 married life,married life,7.661538461538461,3125.769230769231,1239.3846153846157,11
 married life ,married life ,7.8,1396.0,2908.5,2
-martial arts,martial arts,7.833333333333333,2628.1111111111118,5639.555555555556,2
+martial arts,martial arts,7.833333333333333,2628.111111111112,5639.555555555556,2
 martial arts ,martial arts ,7.960000000000001,3544.8,5054.4,2
 martial arts master,martial arts master,8.05,1492.0,9845.0,2
 martial arts school,martial arts school,8.1,773.0,4468.0,1
@@ -1406,10 +1406,10 @@ professor male lead,professor male lead,7.65,2182.0,3148.0,2
 programmer,programmer,7.8,966.0,3624.0,1
 promise,promise,7.1,6638.0,178.0,1
 prosecutor female lead,prosecutor female lead,8.211111111111112,2191.5454545454545,5778.666666666667,11
-prosecutor male lead,prosecutor male lead,7.717647058823529,2609.6111111111118,2277.705882352941,15
+prosecutor male lead,prosecutor male lead,7.717647058823529,2609.611111111112,2277.705882352941,15
 prosecutor male lead ,prosecutor male lead ,7.933333333333333,2646.333333333333,2545.0,3
 prosecutor supporting character,prosecutor supporting character,8.033333333333333,2722.333333333333,1148.3333333333333,3
-prosopagnosia,prosopagnosia,7.883333333333333,237.33333333333331,18093.83333333333,6
+prosopagnosia,prosopagnosia,7.883333333333333,237.3333333333333,18093.83333333333,6
 prostitution,prostitution,8.5,96.0,27200.0,1
 protective brother,protective brother,7.6,3245.0,585.0,1
 protective male lead,protective male lead,8.1,365.0,9000.0,1
@@ -1507,7 +1507,7 @@ ripley syndrome,ripley syndrome,7.300000000000001,1548.5,2272.5,2
 rivalry,rivalry,7.706060606060606,5364.212121212121,8355.575757575758,10
 rivalry ,rivalry ,7.771428571428572,2652.8571428571427,12771.57142857143,3
 rivals to lovers,rivals to lovers,6.9,985.0,4686.0,1
-robot,robot,8.033333333333333,187.33333333333331,27701.0,3
+robot,robot,8.033333333333333,187.3333333333333,27701.0,3
 romance,romance,7.943043478260867,1710.708695652174,12055.860869565216,3
 romance ,romance ,7.906451612903226,1439.0645161290322,8428.90322580645,2
 romeo and juliet,romeo and juliet,8.0,790.0,5228.0,2
@@ -1618,7 +1618,7 @@ singer male lead,singer male lead,7.5,10751.0,9847.1,10
 singer male lead ,singer male lead ,8.1,189.0,14601.0,1
 singing,singing,7.525,1172.75,24728.75,3
 singing ,singing ,7.6,89.0,32805.0,1
-single father,single father,7.522727272727272,3858.5454545454554,1999.5,16
+single father,single father,7.522727272727272,3858.545454545456,1999.5,16
 single father ,single father ,7.85,1556.1666666666667,4335.833333333333,1
 single father male lead,single father male lead,7.859999999999999,1681.4,4366.6,4
 single father male lead ,single father male lead ,8.0,2222.0,1616.0,1

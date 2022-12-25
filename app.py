@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from app_home import run_home_app
 from app_eda import run_eda_app
-from app_copy import run_sc_app
+from app_search import run_sc_app
 from googletrans import Translator
 import requests
 from bs4 import BeautifulSoup
@@ -10,28 +10,33 @@ from bs4 import BeautifulSoup
 
 def main() :
     st.set_page_config(layout="wide")
-    df_name = pd.read_csv('data/drama_name.csv')
-    df_actor = pd.read_csv('data/actor_list.csv')
-    df_actor = df_actor.drop_duplicates()
-    df= pd.read_csv('data/realeditdrama.csv', thousands = ',')
+    df = pd.read_csv('data/realeditdrama.csv', thousands = ',',index_col='Unnamed: 0')
+    df_name = df[['drama_name']]
+    actor = df['actors'].dropna()
+    actor_list = []
+    for x in actor :
+        x = x.split(',')
+        for x2 in x :
+            x2 = x2.strip(" ")
+            x2 = x2.strip("''")
+            actor_list.append(x2)
+    df_actor = pd.DataFrame(data =actor_list).drop_duplicates().rename(columns={0:'actors'})
     translator = Translator()
     
     
     menu = ['홈','상세검색','분석']
-    choice = st.sidebar.selectbox('메뉴',menu)
+    st.sidebar.title(' 🎭 menu')
+    choice = st.sidebar.selectbox('',menu)
     
     radio_select = st.sidebar.radio('', ['드라마 제목','배우이름']) 
     st.sidebar.subheader('{}으로 검색'.format(radio_select))
-
-    
-    
 
     if radio_select == '드라마 제목' :
 
 
         select = st.sidebar.text_input('')
         if len(select) != 0 :
-            name_select = st.sidebar.selectbox('드라마확인',df_name[df_name['name'].str.contains(str(select),na=False,case=False)])
+            name_select = st.sidebar.selectbox('드라마확인',df_name[df_name['drama_name'].str.contains(str(select),na=False,case=False)])
             if str(name_select) in df_name['drama_name'].tolist() :
                 serch = 'https://mydramalist.com/search?q='+name_select +'&adv=titles&ty=68&co=3&so=relevance'
                 re = requests.get(serch)
@@ -62,8 +67,8 @@ def main() :
         select = st.sidebar.text_input('')
         
         if len(select) != 0 :
-            name_select = st.sidebar.selectbox('배우이름 확인',df_actor[df_actor['actor'].str.contains(str(select),na=False,case=False)])
-            if str(name_select) in df_actor['actor'].tolist() :
+            name_select = st.sidebar.selectbox('배우이름 확인',df_actor[df_actor['actors'].str.contains(str(select),na=False,case=False)])
+            if str(name_select) in df_actor['actors'].tolist() :
 
                 serch = 'https://mydramalist.com/search?q='+name_select
                 re = requests.get(serch)
