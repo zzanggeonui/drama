@@ -21,6 +21,7 @@
 <img src= https://img.shields.io/badge/matplotlib.pyplot-F7931E?style=flat&logo=matplotlib.pyplot&logoColor=white)/>
 <img src=https://img.shields.io/badge/Seaborn-232F3E?style=flat&logo=Seaborn&logoColor=white />
 <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=Bootstrap&logoColor=white" />
+<img src="https://img.shields.io/badge/Bootstrap-4285F4?style=flat&logo=googletrans&logoColor=white" />
 <br/>
 	
 <div align=center>
