@@ -1,15 +1,11 @@
 import streamlit as st
 import pandas as pd
-from app_home import run_home_app
-from app_eda import run_eda_app
-from app_search import run_sc_app
-from app_side import run
 from googletrans import Translator
 import requests
 from bs4 import BeautifulSoup
 
 
-def main() :
+def run_main_side() :
     st.set_page_config(layout="wide")
     df = pd.read_csv('data/realeditdrama.csv', thousands = ',',index_col='Unnamed: 0')
     df_name = df[['drama_name']]
@@ -93,16 +89,3 @@ def main() :
 
 
 
-    if choice == '홈' :
-        run_home_app()
-        
-
-    elif choice == '상세검색':
-        run_sc_app()
-
-    elif choice == '분석':
-        run_eda_app()
-
-
-if __name__ == '__main__':
-    main()
