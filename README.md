@@ -33,17 +33,17 @@
 <br/>
 <div align=left>
 
-<br/> 
+ 
 	
 ## 개요
-<br/>
+	
 드라마 및 영상물 리뷰 전문 사이트인 IMDb와 MyDramaList의 한국 드라마 데이터를 기반으로 한국드라마 흥행요인 분석 및 검색 기능을 구현한 앱입니다.
-<br/>
+
 
 ## 주소
-<br/>
+
 http://ec2-43-201-85-127.ap-northeast-2.compute.amazonaws.com:8503/
-<br/>
+
 
 
 	
@@ -57,7 +57,7 @@ http://ec2-43-201-85-127.ap-northeast-2.compute.amazonaws.com:8503/
 - 검색을 통해 작품 시놉시스와 정보, 배우의 필모그래피를 확인할 수 있습니다
 - 상세검색에선 Interactive select를 통한 원하는 작품을 직접 찾아볼 수 있으며
 - 분석에선 드라마의 장르,태그,배우,러닝타임,에피소드 갯수등 여러 항목이 드라마 흥행에 영향이 있는지 분석하였습니다.
-<br/>
+
 	
 ## 작업 설명
 - jupyter notebook을 통해 데이터프레임 가공 및 데이터 분석을 진행하였습니다
@@ -66,6 +66,7 @@ http://ec2-43-201-85-127.ap-northeast-2.compute.amazonaws.com:8503/
 
 
 ## 데이터 설명
+	
 - Genres = 장르  
 - Tags= 태그 
 - Content Rating=시청등급  
@@ -82,6 +83,7 @@ http://ec2-43-201-85-127.ap-northeast-2.compute.amazonaws.com:8503/
 	
 	
 ## 데이터 참고
+
 - 메인 데이터 :https://www.kaggle.com/datasets/iphigeniebera/korean-drama-list-about-740-unique-dramas
 - 스크래핑 시놉시스 및 사진 자료  : https://mydramalist.com/
 
