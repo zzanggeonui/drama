@@ -174,7 +174,7 @@ def run_eda_app() :
                 vmin= -1, vmax= 1 , linewidths=0.5 )
             st.pyplot(fig2)
             st.dataframe(df_corr)
-            st.info('화제성 과 순위는 낮은 숫자일수록 좋은 지수로, 반비례 할때 관계성이 좋은 지표입니다')
+            st.info('순위는 낮은 숫자일수록 좋은 지수로, 반비례 할때 관계성이 좋은 지표입니다')
 
 
 
