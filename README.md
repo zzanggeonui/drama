@@ -37,17 +37,13 @@
 	
 ## 개요
 	
-드라마 및 영상물 리뷰 전문 사이트인 IMDb와 MyDramaList의 한국 드라마 데이터를 기반으로 한국드라마 흥행요인 분석 및 검색 기능을 구현한 앱입니다.
+#### 드라마 및 영상물 리뷰 전문 사이트인 IMDb와 MyDramaList의 한국 드라마 데이터를 기반으로 한국드라마 흥행요인 분석 및 검색 기능을 구현한 앱입니다.
 
 
 ## 주소
 
 http://ec2-43-201-85-127.ap-northeast-2.compute.amazonaws.com:8503/
 
-
-
-	
-	
 ## 프로젝트 설명
 ![image](https://github.com/zzanggeonui/drama/blob/main/data/IMG.png)
 ![image](https://github.com/zzanggeonui/drama/blob/main/data/img2.png)
@@ -60,6 +56,7 @@ http://ec2-43-201-85-127.ap-northeast-2.compute.amazonaws.com:8503/
 
 	
 ## 작업 설명
+
 - jupyter notebook을 통해 데이터프레임 가공 및 데이터 분석을 진행하였습니다
 - putty를 통해 AWS EC2 인스턴스에 연결하여 서버를 배포 및 관리하였습니다.
 - github action을 활용하여 CI/CD를 구현하였습니다.
