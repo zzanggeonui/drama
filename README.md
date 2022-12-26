@@ -36,8 +36,7 @@
  
 	
 ## 개요
-	
-드라마 및 영상물 리뷰 전문 사이트인 IMDb와 MyDramaList의 한국 드라마 데이터를 기반으로 한국드라마 흥행요인 분석 및 검색 기능을 구현한 앱입니다.
+
 
 
 ## 주소
@@ -50,9 +49,7 @@ http://ec2-43-201-85-127.ap-northeast-2.compute.amazonaws.com:8503/
 ![image](https://github.com/zzanggeonui/drama/blob/main/data/img3.png)
 ![image](https://github.com/zzanggeonui/drama/blob/main/data/img4.png)
 	
-- 검색을 통해 작품 시놉시스와 정보, 배우의 필모그래피를 확인할 수 있습니다
-- 상세검색에선 Interactive select를 통한 원하는 작품을 직접 찾아볼 수 있으며
-- 분석에선 드라마의 장르,태그,배우,러닝타임,에피소드 갯수등 여러 항목이 드라마 흥행에 영향이 있는지 분석하였습니다.
+
 
 	
 ## 작업 설명
