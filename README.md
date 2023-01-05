@@ -41,7 +41,7 @@
 
 ## 주소
 
-http://ec2-43-201-85-127.ap-northeast-2.compute.amazonaws.com:8503/
+http://ec2-43-201-85-127.ap-northeast-2.compute.amazonaws.com:8502/
 
 ## 프로젝트 설명
 ![image](https://github.com/zzanggeonui/drama/blob/main/data/IMG.png)
